@@ -1,0 +1,79 @@
+# Python 3.12.9
+#
+# 가상환경 세팅 (uv)
+# uv venv .venv --python 3.12
+#
+# 활성화
+# source .venv/bin/activate        # Mac/Linux
+# .venv\Scripts\activate.ps1       # Windows
+#
+# 패키지 설치
+# uv pip install -r requirements.txt
+
+# ==============================
+# LLM & LangChain
+# ==============================
+langchain
+langchain-core
+langchain-openai
+langchain-text-splitters
+langchain-neo4j
+langchain-classic
+langchain-google-genai
+
+# ==============================
+# LangGraph
+# ==============================
+langgraph
+langgraph-checkpoint
+langgraph-prebuilt
+
+# ==============================
+# OpenAI
+# ==============================
+openai
+tiktoken
+
+# ==============================
+# GraphDB - Neo4j
+# ==============================
+neo4j
+neo4j-graphrag
+
+# ==============================
+# VectorDB - Qdrant
+# ==============================
+qdrant-client
+langchain-qdrant
+
+# ==============================
+# Data Processing
+# ==============================
+pandas
+numpy
+pypdf
+beautifulsoup4
+
+# ==============================
+# Database / API
+# ==============================
+supabase
+
+
+# ==============================
+# Environment
+# ==============================
+python-dotenv
+requests
+ipywidgets
+fastapi
+uvicorn
+
+# ==============================
+# Evaluation (RAGAS & Jupyter)
+# ==============================
+ragas
+jupyter
+nest-asyncio
+rapidfuzz
+

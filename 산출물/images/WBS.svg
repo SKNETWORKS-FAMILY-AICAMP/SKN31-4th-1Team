@@ -1,0 +1,554 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1165 756" width="1165" height="756">
+<rect x="0" y="0" width="1165" height="756" fill="white"/>
+<rect x="0" y="0" width="825" height="30" fill="#D9D9D9" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="412.5" y="15.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="15" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">건망검진 - AI 치매 정보 알리미 (WBS)</text>
+<rect x="825" y="0" width="340" height="30" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="995.0" y="15.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">2026. 7. 6  ~  7. 15</text>
+<rect x="0" y="30" width="150" height="24" fill="#D9D9D9" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="11" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">대분류</text>
+<rect x="150" y="30" width="185" height="24" fill="#D9D9D9" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="242.5" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="11" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">항목</text>
+<rect x="335" y="30" width="330" height="24" fill="#D9D9D9" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="500.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="11" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">세부 작업 내용</text>
+<rect x="665" y="30" width="95" height="24" fill="#D9D9D9" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="11" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">담당</text>
+<rect x="760" y="30" width="65" height="24" fill="#D9D9D9" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="11" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">진행률</text>
+<rect x="825" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="842.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">월</text>
+<rect x="859" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="876.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">화</text>
+<rect x="893" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="910.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">수</text>
+<rect x="927" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="944.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">목</text>
+<rect x="961" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="978.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">금</text>
+<rect x="995" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1012.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">토</text>
+<rect x="1029" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1046.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">일</text>
+<rect x="1063" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1080.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">월</text>
+<rect x="1097" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1114.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">화</text>
+<rect x="1131" y="30" width="34" height="24" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1148.0" y="42.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">수</text>
+<rect x="0" y="54" width="150" height="22" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="54" width="185" height="22" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="335" y="54" width="330" height="22" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="665" y="54" width="95" height="22" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="760" y="54" width="65" height="22" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="825" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="842.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">6</text>
+<rect x="859" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="876.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">7</text>
+<rect x="893" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="910.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">8</text>
+<rect x="927" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="944.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">9</text>
+<rect x="961" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="978.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">10</text>
+<rect x="995" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1012.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">11</text>
+<rect x="1029" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1046.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">12</text>
+<rect x="1063" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1080.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">13</text>
+<rect x="1097" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1114.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">14</text>
+<rect x="1131" y="54" width="34" height="22" fill="#1F3864" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="1148.0" y="65.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">15</text>
+<rect x="150" y="76" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="88.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">1.1 요구사항 정의</text>
+<rect x="335" y="76" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="88.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">서비스 목표, 타겟(보호자·환자) 시나리오, 기능 목록 정의</text>
+<rect x="665" y="76" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="88.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">전체</text>
+<rect x="760" y="76" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="88.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="76" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="76" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="100" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="112.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">1.2 주제 선정 및 배경 조사</text>
+<rect x="335" y="100" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="112.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">치매 통계·인식조사 등 공공데이터 기반 배경 조사</text>
+<rect x="665" y="100" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="112.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">전체</text>
+<rect x="760" y="100" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="112.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="100" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="100" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="124" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="136.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">1.3 시스템 아키텍처 설계</text>
+<rect x="335" y="124" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="136.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">RAG 구조, 기술 스택 선정</text>
+<rect x="665" y="124" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="136.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">전체</text>
+<rect x="760" y="124" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="136.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="124" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="124" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="124" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="124" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="124" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="124" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="124" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="124" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="124" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="124" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="148" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="160.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">1.4 Git 구조 및 협업 규칙 정의</text>
+<rect x="335" y="148" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="160.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">브랜치 전략, 커밋 컨벤션, 폴더 구조 정의</text>
+<rect x="665" y="148" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="160.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">전체</text>
+<rect x="760" y="148" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="160.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="148" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="148" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="148" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="148" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="148" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="148" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="148" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="148" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="148" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="148" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="0" y="76" width="150" height="96" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="124.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10.5" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">1. 기획 및 설계</text>
+<rect x="0" y="172" width="1165" height="8" fill="#F2F2F2" stroke="none" stroke-width="0.75"/>
+<rect x="150" y="180" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="192.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">2.1 데이터 수집</text>
+<rect x="335" y="180" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="192.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">치매안심센터 공공데이터, 치매 가이드라인 문서 수집</text>
+<rect x="665" y="180" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="192.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">진영·영선</text>
+<rect x="760" y="180" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="192.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="180" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="180" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="180" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="180" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="180" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="180" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="180" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="180" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="180" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="180" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="204" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="216.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">2.2 데이터 전처리</text>
+<rect x="335" y="204" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="216.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">CSV 병합·정제, 문서 chunking 설계</text>
+<rect x="665" y="204" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="216.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">진영·영선</text>
+<rect x="760" y="204" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="216.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="204" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="204" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="204" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="204" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="204" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="204" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="204" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="204" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="204" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="204" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="228" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="240.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">2.3 임베딩 생성</text>
+<rect x="335" y="228" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="240.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">OpenAI 임베딩 모델(text-embedding-3-small) 적용</text>
+<rect x="665" y="228" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="240.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">영선</text>
+<rect x="760" y="228" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="240.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="228" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="228" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="228" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="228" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="228" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="228" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="228" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="228" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="228" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="228" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="252" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="264.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">2.4 Qdrant 구축</text>
+<rect x="335" y="252" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="264.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">VectorDB 컬렉션 설계 및 벡터 적재, Agent Tool 개발</text>
+<rect x="665" y="252" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="264.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">영선</text>
+<rect x="760" y="252" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="264.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="252" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="252" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="252" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="252" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="252" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="252" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="252" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="252" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="252" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="252" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="276" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="288.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">2.5 Neo4j 구축</text>
+<rect x="335" y="276" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="288.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">GraphDB 스키마 설계, AuraDB 적재, Agent Tool 개발</text>
+<rect x="665" y="276" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="288.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">진영</text>
+<rect x="760" y="276" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="288.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="276" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="276" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="276" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="276" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="276" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="276" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="276" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="276" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="276" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="276" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="0" y="180" width="150" height="120" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="240.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10.5" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">2. 데이터 구축 (RAG)</text>
+<rect x="0" y="300" width="1165" height="8" fill="#F2F2F2" stroke="none" stroke-width="0.75"/>
+<rect x="150" y="308" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="320.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">3.1 LLM 챗봇 Agent</text>
+<rect x="335" y="308" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="320.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">Prompt 설계, 응답 생성 로직 구현</text>
+<rect x="665" y="308" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="320.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">효민·연아</text>
+<rect x="760" y="308" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="320.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="308" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="308" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="308" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="308" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="308" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="308" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="308" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="308" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="308" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="308" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="332" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="344.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">3.2 LangChain 기반 ReAct Agent</text>
+<rect x="335" y="332" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="344.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">Tool 호출 판단, GraphDB/VectorDB Tool 라우팅 구현</text>
+<rect x="665" y="332" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="344.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">효민·연아</text>
+<rect x="760" y="332" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="344.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="332" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="332" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="332" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="332" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="332" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="332" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="332" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="332" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="332" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="332" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="356" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="368.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">3.3 상태(state) 관리</text>
+<rect x="335" y="356" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="368.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">환자 상태 filter, 상태 변경 제안 구조 구현</text>
+<rect x="665" y="356" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="368.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">효민·연아</text>
+<rect x="760" y="356" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="368.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="356" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="356" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="356" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="356" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="356" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="356" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="356" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="356" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="356" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="356" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="380" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="392.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">3.4 메모리 및 대화 관리</text>
+<rect x="335" y="380" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="392.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">Supabase Checkpointer(단기)·Store(장기) 연동</text>
+<rect x="665" y="380" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="392.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">동민</text>
+<rect x="760" y="380" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="392.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="380" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="380" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="380" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="380" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="380" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="380" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="380" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="380" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="380" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="380" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="0" y="308" width="150" height="96" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="356.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10.5" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">3. AI &amp; Agent 개발</text>
+<rect x="0" y="404" width="1165" height="8" fill="#F2F2F2" stroke="none" stroke-width="0.75"/>
+<rect x="150" y="412" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="424.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">4.1 API 설계</text>
+<rect x="335" y="412" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="424.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">REST API 설계 (/api/chat 등 요청·응답 정의)</text>
+<rect x="665" y="412" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="424.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">동민</text>
+<rect x="760" y="412" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="424.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="412" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="412" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="412" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="412" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="412" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="412" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="412" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="412" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="412" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="412" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="436" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="448.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">4.2 핵심 기능 구현</text>
+<rect x="335" y="436" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="448.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">RAG 검색·Agent 연동·챗 응답 API 구현</text>
+<rect x="665" y="436" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="448.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">동민·효민·연아</text>
+<rect x="760" y="436" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="448.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="436" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="436" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="436" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="436" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="436" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="436" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="436" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="436" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="436" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="436" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="460" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="472.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">4.3 외부 서비스 연동</text>
+<rect x="335" y="460" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="472.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">Neo4j·Qdrant·Supabase 연동</text>
+<rect x="665" y="460" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="472.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">효민·연아</text>
+<rect x="760" y="460" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="472.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="460" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="460" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="460" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="460" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="460" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="460" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="460" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="460" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="460" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="460" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="484" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="496.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">4.4 예외 처리 및 로깅</text>
+<rect x="335" y="484" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="496.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">에러 핸들링, 배포 웹훅 알림 설정</text>
+<rect x="665" y="484" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="496.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">동민</text>
+<rect x="760" y="484" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="496.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="484" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="484" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="484" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="484" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="484" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="484" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="484" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="484" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="484" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="484" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="0" y="412" width="150" height="96" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="460.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10.5" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">4. 백엔드 개발 (FastAPI)</text>
+<rect x="0" y="508" width="1165" height="8" fill="#F2F2F2" stroke="none" stroke-width="0.75"/>
+<rect x="150" y="516" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="528.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">5.1 기본 화면 구현</text>
+<rect x="335" y="516" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="528.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">메인·챗봇 UI, 입력/출력 화면 구현</text>
+<rect x="665" y="516" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="528.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">동민</text>
+<rect x="760" y="516" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="528.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="516" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="516" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="516" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="516" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="516" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="516" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="516" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="516" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="516" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="516" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="540" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="552.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">5.2 API 연동</text>
+<rect x="335" y="540" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="552.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">백엔드 API 연동 및 상태 관리</text>
+<rect x="665" y="540" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="552.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">동민</text>
+<rect x="760" y="540" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="552.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="540" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="540" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="540" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="540" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="540" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="540" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="540" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="540" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="540" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="540" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="0" y="516" width="150" height="48" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="540.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10.5" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">5. 프론트엔드 개발</text>
+<rect x="0" y="564" width="1165" height="8" fill="#F2F2F2" stroke="none" stroke-width="0.75"/>
+<rect x="150" y="572" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="584.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">6.1 기능 테스트</text>
+<rect x="335" y="572" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="584.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">버그 수정</text>
+<rect x="665" y="572" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="584.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">전체</text>
+<rect x="760" y="572" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="584.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="572" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="572" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="572" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="572" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="572" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="572" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="572" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="572" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="572" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="572" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="596" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="608.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">6.2 성능 및 품질 평가</text>
+<rect x="335" y="596" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="608.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">GraphDB/VectorDB 검색 성능 평가, RAGAS 기반 모델 평가</text>
+<rect x="665" y="596" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="608.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">진영·영선</text>
+<rect x="760" y="596" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="608.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="596" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="596" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="596" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="596" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="596" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="596" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="596" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="596" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="596" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="596" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="620" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="632.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">6.3 사용자(정성) 테스트</text>
+<rect x="335" y="620" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="632.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">대표 질문 기반 정성 평가</text>
+<rect x="665" y="620" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="632.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">효민·연아</text>
+<rect x="760" y="620" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="632.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="620" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="620" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="0" y="572" width="150" height="72" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="608.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10.5" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">6. 테스트 및 평가</text>
+<rect x="0" y="644" width="1165" height="8" fill="#F2F2F2" stroke="none" stroke-width="0.75"/>
+<rect x="150" y="652" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="664.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">7.1 배포 환경 구축</text>
+<rect x="335" y="652" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="664.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">Render(백엔드), Vercel(프론트) 배포 설정</text>
+<rect x="665" y="652" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="664.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">동민</text>
+<rect x="760" y="652" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="664.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="652" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="652" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="652" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="652" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="652" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="652" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="652" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="652" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="652" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="652" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="676" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="688.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">7.2 최종 배포 및 점검</text>
+<rect x="335" y="676" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="688.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">환경변수(.env) 점검, 최종 배포 및 동작 확인</text>
+<rect x="665" y="676" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="688.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">전체</text>
+<rect x="760" y="676" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="688.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="676" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="676" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="676" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="676" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="676" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="676" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="676" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="676" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="676" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="676" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="0" y="652" width="150" height="48" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="676.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10.5" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">7. 배포 및 운영 준비</text>
+<rect x="0" y="700" width="1165" height="8" fill="#F2F2F2" stroke="none" stroke-width="0.75"/>
+<rect x="150" y="708" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="720.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">8.1 산출물 문서화</text>
+<rect x="335" y="708" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="720.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">아키텍처·전처리·성능평가 문서 및 README 작성</text>
+<rect x="665" y="708" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="720.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">진영</text>
+<rect x="760" y="708" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="720.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="708" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="708" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="708" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="708" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="708" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="708" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="708" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="708" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="708" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="708" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="150" y="732" width="185" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="154" y="744.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">8.2 발표 준비</text>
+<rect x="335" y="732" width="330" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="339" y="744.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="start" dominant-baseline="middle">PPT 제작 및 발표 리허설</text>
+<rect x="665" y="732" width="95" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="712.5" y="744.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#000000" text-anchor="middle" dominant-baseline="middle">전체</text>
+<rect x="760" y="732" width="65" height="24" fill="#70AD47" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="792.5" y="744.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="9.5" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" font-weight="bold">100%</text>
+<rect x="825" y="732" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="859" y="732" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="893" y="732" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="927" y="732" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="961" y="732" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="995" y="732" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1029" y="732" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1063" y="732" width="34" height="24" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1097" y="732" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="1131" y="732" width="34" height="24" fill="#5B9BD5" stroke="#BFBFBF" stroke-width="0.75"/>
+<rect x="0" y="708" width="150" height="48" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.75"/>
+<text x="75.0" y="732.0" font-family="Malgun Gothic, AppleGothic, sans-serif" font-size="10.5" fill="#000000" text-anchor="middle" dominant-baseline="middle" font-weight="bold">8. 발표 준비</text>
+<rect x="0" y="0" width="1165" height="756" fill="none" stroke="#1F3864" stroke-width="1.5"/>
+</svg>

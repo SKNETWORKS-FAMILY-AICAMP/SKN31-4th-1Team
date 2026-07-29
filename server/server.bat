@@ -1,0 +1,3 @@
+cd /d "%~dp0"
+..\.venv\Scripts\python.exe -m uvicorn main:app --reload --port 8000 --host 0.0.0.0
+pause
