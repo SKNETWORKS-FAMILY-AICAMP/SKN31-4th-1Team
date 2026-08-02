@@ -7,11 +7,11 @@ project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from fastapi import FastAPI, BackgroundTasks
+from fastapi import FastAPI, BackgroundTasks, Depends, Header, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 
 from pydantic import BaseModel
-from typing import List, Dict
+from typing import List, Dict, Optional
 from dotenv import load_dotenv
 
 from langchain_openai import ChatOpenAI
@@ -21,7 +21,32 @@ from langchain.agents import create_agent
 from server.agent import build_agent
 from server.context_loader import load_context, save_and_summarize
 import json
+from supabase import create_client, Client
+from dotenv import load_dotenv
 
+load_dotenv()
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+if SUPABASE_URL and SUPABASE_KEY:
+    supabase_client: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+else:
+    supabase_client = None
+
+def verify_token(authorization: str = Header(None)):
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+    token = authorization.split(" ")[1]
+    try:
+        if not supabase_client:
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Supabase configuration missing")
+        user_res = supabase_client.auth.get_user(token)
+        if not user_res or not user_res.user:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
+        return user_res.user
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=str(e))
 
 app = FastAPI(
     title="치매 안내 챗봇 API",
@@ -45,8 +70,6 @@ app.add_middleware(
 )
 
 class ChatRequest(BaseModel):
-    user_id: str
-    user_name: str
     messages: List[Dict[str, str]]
 
 is_first_health_check = True
@@ -75,7 +98,8 @@ def health_check():
 
 
 @app.post("/api/chat")
-def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks):
+def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks, user=Depends(verify_token)):
+    user_id = user.id
     # 1. 프론트엔드에서 받은 메시지 중 가장 마지막 사용자의 질문만 추출
     last_user_message = ""
     for msg in reversed(request.messages):
@@ -84,7 +108,7 @@ def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks):
             break
             
     # 2. Supabase에서 이전 대화 맥락(요약 + 최근 N턴) 가져오기
-    chat_id, summary, recent = load_context(request.user_id)
+    chat_id, summary, recent = load_context(user_id)
     
     formatted_messages = []
     if summary:
@@ -109,7 +133,7 @@ def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks):
             "structured_response": None,
             "final_response": None
         },
-        config={"configurable": {"user_id": request.user_id}}
+        config={"configurable": {"user_id": user_id}}
     )
 
     # 5. 구조화된 응답 추출 (LangGraph 최종 출력은 final_response)
@@ -124,9 +148,9 @@ def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks):
     else:
         ai_text_to_save = response_data["content"]["question"]
         
-    background_tasks.add_task(save_and_summarize, request.user_id, chat_id, last_user_message, ai_text_to_save)
+    background_tasks.add_task(save_and_summarize, user_id, chat_id, last_user_message, ai_text_to_save)
 
     return {
-        "session_id": request.user_id,
+        "session_id": user_id,
         "response": response_data
     }
