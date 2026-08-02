@@ -21,32 +21,7 @@ from langchain.agents import create_agent
 from server.agent import build_agent
 from server.context_loader import load_context, save_and_summarize
 import json
-from supabase import create_client, Client
-from dotenv import load_dotenv
-
-load_dotenv()
-
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-
-if SUPABASE_URL and SUPABASE_KEY:
-    supabase_client: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-else:
-    supabase_client = None
-
-def verify_token(authorization: str = Header(None)):
-    if not authorization or not authorization.startswith("Bearer "):
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
-    token = authorization.split(" ")[1]
-    try:
-        if not supabase_client:
-            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Supabase configuration missing")
-        user_res = supabase_client.auth.get_user(token)
-        if not user_res or not user_res.user:
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
-        return user_res.user
-    except Exception as e:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=str(e))
+from server.auth import verify_token
 
 app = FastAPI(
     title="치매 안내 챗봇 API",
@@ -99,7 +74,7 @@ def health_check():
 
 @app.post("/api/chat")
 def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks, user=Depends(verify_token)):
-    user_id = user.id
+    user_id = user["sub"]
     # 1. 프론트엔드에서 받은 메시지 중 가장 마지막 사용자의 질문만 추출
     last_user_message = ""
     for msg in reversed(request.messages):

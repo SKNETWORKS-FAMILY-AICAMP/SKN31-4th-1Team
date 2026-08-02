@@ -58,6 +58,7 @@ beautifulsoup4
 # Database / API
 # ==============================
 supabase
+pyjwt[crypto]
 
 
 # ==============================
