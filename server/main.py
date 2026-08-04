@@ -146,6 +146,18 @@ def delete_account(user=Depends(verify_token)):
         # Admin 클라이언트 생성 (service_role)
         supabase_admin: Client = create_client(supabase_url, supabase_service_key)
         
+        # 유저 삭제 전에 아바타 이미지 정리 (avatars 버킷 내 유저 폴더)
+        try:
+            # avatars 버킷의 사용자 폴더 내 파일 목록 조회
+            files = supabase_admin.storage.from_("avatars").list(user_id)
+            if files:
+                file_paths = [f"{user_id}/{f['name']}" for f in files]
+                # 파일 일괄 삭제
+                supabase_admin.storage.from_("avatars").remove(file_paths)
+        except Exception as e:
+            # 파일 삭제 실패가 유저 삭제 실패로 이어지지 않게 처리
+            print(f"Delete Avatars Error (Ignored): {e}")
+
         # 유저 삭제 실행
         supabase_admin.auth.admin.delete_user(user_id)
         return {"status": "success", "message": "계정이 성공적으로 탈퇴 처리되었습니다."}
