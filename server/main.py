@@ -129,3 +129,25 @@ def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks, user=
         "session_id": user_id,
         "response": response_data
     }
+
+# --- 회원 탈퇴 엔드포인트 ---
+@app.delete("/api/delete-account")
+def delete_account(user=Depends(verify_token)):
+    user_id = user["sub"]
+    try:
+        from supabase import create_client, Client
+        supabase_url = os.getenv("SUPABASE_URL")
+        supabase_service_key = os.getenv("SUPABASE_SERVICE_KEY")
+        
+        if not supabase_url or not supabase_service_key:
+            raise HTTPException(status_code=500, detail="Supabase Service Key is not configured on the server.")
+            
+        # Admin 클라이언트 생성 (service_role)
+        supabase_admin: Client = create_client(supabase_url, supabase_service_key)
+        
+        # 유저 삭제 실행
+        supabase_admin.auth.admin.delete_user(user_id)
+        return {"status": "success", "message": "계정이 성공적으로 탈퇴 처리되었습니다."}
+    except Exception as e:
+        print(f"Delete Account Error: {e}")
+        raise HTTPException(status_code=500, detail=f"회원 탈퇴 중 오류가 발생했습니다: {str(e)}")
