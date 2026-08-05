@@ -101,8 +101,8 @@ LLM과 tool이 답이 나올 때까지 왕복하는 <b>ReAct 에이전트</b> �
 
 
 ## 예시. 화면
-- [성능 평가](./산출물/성능평가.md)
-- [화면정의서](./산출물/화면정의서.html)
+## 화면
+- [화면정의서](https://sknetworks-family-aicamp.github.io/SKN31-4th-1Team/산출물/화면정의서.html)
 
 ![서비스 데모](산출물/images/demo11.gif)
 ---
