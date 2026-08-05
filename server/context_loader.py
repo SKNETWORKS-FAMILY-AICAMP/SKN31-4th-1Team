@@ -66,12 +66,30 @@ def load_context(user_id: str):
         print(f"Error in load_context: {e}")
         return None, "", []
 
-def summarize_old_message(oldest_turn: dict, existing_summary: str) -> str:
+def summarize_old_message(oldest_turn: dict, existing_summary: str, later_context: list = None) -> str:
     """
     기존 요약본과 가장 오래된 1턴을 결합하여 새로운 요약본을 생성합니다.
+    later_context(아직 요약되지 않은 이후 대화)에 정정 내용이 있으면 그것을 우선 반영합니다.
     """
-    sys_prompt = "당신은 치매 상담 챗봇의 대화 맥락을 요약하는 어시스턴트입니다. 이전 요약본과 추가된 대화를 바탕으로 핵심 정보(환자 상태, 증상 등)를 훼손하지 않으면서 간결하게 하나의 요약본으로 병합하세요."
-    
+    sys_prompt = (
+        "당신은 치매 상담 챗봇의 대화 맥락을 요약하는 어시스턴트입니다. "
+        "이전 요약본과 추가된 대화를 바탕으로 핵심 정보(환자 상태, 증상, 상담 대상과의 관계 등)를 "
+        "훼손하지 않으면서 간결하게 하나의 요약본으로 병합하세요.\n\n"
+        "★ 정정 처리 규칙: [추가할 과거 대화 1턴]에서 언급된 사실(상담 대상과의 관계, 증상, 이름 등)이 "
+        "[이후 대화 참고용]에서 다르게 정정되었다면, 반드시 정정된 최신 정보를 기준으로 요약하세요. "
+        "예를 들어 처음엔 '아는 사람'이라고 했다가 이후 대화에서 '사실은 삼촌이었다'고 정정했다면, "
+        "요약본에는 '삼촌'으로만 기록하고 '아는 사람'이라는 표현은 남기지 마세요. "
+        "오래된 정보와 정정된 정보를 나란히 병기하거나 모순된 채로 남기지 마세요."
+    )
+
+    later_lines = []
+    for t in (later_context or []):
+        if t.get("user"):
+            later_lines.append(f"보호자: {t['user']}")
+        if t.get("ai"):
+            later_lines.append(f"상담봇: {t['ai']}")
+    later_text = "\n".join(later_lines)
+
     user_msg = f"""
 [이전 요약본]
 {existing_summary if existing_summary else "없음"}
@@ -80,7 +98,10 @@ def summarize_old_message(oldest_turn: dict, existing_summary: str) -> str:
 보호자: {oldest_turn.get('user', '')}
 상담봇: {oldest_turn.get('ai', '')}
 
-이 내용들을 바탕으로 전체 대화의 흐름과 핵심 정보를 하나의 문단으로 요약해주세요.
+[이후 대화 참고용 (아직 요약 대상 아님, 위 턴에 대한 정정 여부 확인용)]
+{later_text if later_text else "없음"}
+
+이 내용들을 바탕으로, 정정 처리 규칙을 지키며 전체 대화의 흐름과 핵심 정보를 하나의 문단으로 요약해주세요.
 """
     try:
         res = summary_llm.invoke([
@@ -118,7 +139,9 @@ def save_and_summarize(user_id: str, chat_id: str, user_text: str, ai_text: str)
         # 5턴 초과 시 롤링 요약
         if len(recent) > 5:
             oldest_turn = recent.pop(0)
-            summary = summarize_old_message(oldest_turn, summary)
+            # pop 이후 남은 recent(= 이후 대화)를 넘겨서, 오래된 턴 내용이
+            # 그 사이 정정되었는지 확인하고 반영하게 한다.
+            summary = summarize_old_message(oldest_turn, summary, later_context=recent)
             
         # DB 업데이트
         updated_conversation = {
