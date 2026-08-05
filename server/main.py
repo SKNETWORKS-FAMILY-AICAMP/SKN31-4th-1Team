@@ -167,3 +167,18 @@ def delete_account(user=Depends(verify_token)):
     except Exception as e:
         print(f"Delete Account Error: {e}")
         raise HTTPException(status_code=500, detail="회원 탈퇴 처리 중 오류가 발생했습니다.")
+
+# --- Keepalive 엔드포인트: DB활성화 ---    
+@app.get("/keepalive")
+def keepalive():
+    from graph_db.graph_search_tool import _run_query
+    from qdrant_client import QdrantClient
+
+    # Neo4j CUD (더미 노드 생성 후 즉시 삭제)
+    _run_query("CREATE (k:_Keepalive {ts: datetime()}) WITH k DELETE k")
+
+    # Qdrant read
+    client = QdrantClient(url=os.environ["QDRANT_URL"], api_key=os.environ["QDRANT_API_KEY"])
+    info = client.get_collection("dementia_guideline")
+
+    return {"neo4j": "ok", "qdrant": info.points_count}
