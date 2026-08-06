@@ -81,7 +81,7 @@ TONE_VALUES = [
 
 
 # summarize_checkin이 반드시 돌려줘야 하는 키 목록
-SUMMARY_OUTPUT_KEYS = ["summary", "tone", "concern_note", "observations"]
+SUMMARY_OUTPUT_KEYS = ["summary", "tone", "concern_note", "observations", "recommend_center_search"]
 
 # 6번 규칙(위험/우려 축소 표현 금지)을 프롬프트만 믿지 않고 코드로도 걸러내기 위한 목록.
 # summary/concern_note 어디에도 이 표현들이 들어가면 안 됨.
@@ -141,6 +141,18 @@ def is_valid_summary(data: dict) -> tuple[bool, str]:
         if phrase in concern_note or phrase in summary_text:
             return False, f"금지된 축소 표현 포함('{phrase}'): summary/concern_note를 다시 확인 필요"
 
+    # recommend_center_search: 타입 확인 + tone과의 정합성 확인.
+    # "진짜 필요한 경우에만" 권유하는 게 핵심이라, suggest_consult가 아닌데도
+    # true를 주는 건 프롬프트 위반이므로 코드로 막는다(프롬프트만 믿지 않는다).
+    recommend_center_search = data.get("recommend_center_search")
+    if not isinstance(recommend_center_search, bool):
+        return False, "recommend_center_search가 boolean이 아님"
+    if recommend_center_search and data["tone"] != "suggest_consult":
+        return False, (
+            f"tone이 '{data['tone']}'인데 recommend_center_search가 true임 "
+            "(센터 방문 권유는 tone이 suggest_consult일 때만 가능)"
+        )
+
     return True, ""
 
 
@@ -191,16 +203,27 @@ SUMMARY_SYSTEM_PROMPT = f"""당신은 어르신과 나눈 하루 대화를 요�
    나온 것이라도 tone을 observe가 아니라 suggest_consult로 올려라.
    이 경우 concern_note에는 안전 사건 내용과 7번 규칙에 따른 치매 상담 및
    안내 서비스 이용 권유 문구를 함께 써라.
+9. recommend_center_search는 "가까운 치매안심센터를 찾아가 보시라"는 링크를
+   화면에 띄울지 여부다. **정말 필요한 경우에만 true로 줘라** — 아무 때나
+   습관적으로 true를 주지 마라.
+   - tone이 reassure/neutral/observe면 무조건 false다 (아직 지켜보는
+     단계이지, 센터를 방문할 단계는 아니다).
+   - tone이 suggest_consult여도 자동으로 true가 되는 게 아니다. 대화 내용상
+     "가까운 곳에서 조기검진·상담을 받아보면 실제로 도움이 될 상황"일 때만
+     true로 주고, 이미 병원 진료를 받고 있다거나 다른 경로로 도움을 구하고
+     있다고 언급한 경우처럼 센터 방문이 중복이거나 불필요해 보이면 false로
+     둬라.
 
 # 임무
-그날 나눈 대화(messages)를 읽고 아래 4개 항목을 채워 JSON으로 출력하세요.
+그날 나눈 대화(messages)를 읽고 아래 5개 항목을 채워 JSON으로 출력하세요.
 
 # 출력 스키마
 {{
   "summary": string,          // 그날 대화를 요약한 한 문단
   "tone": string,              // {" | ".join(TONE_VALUES)} 중 하나
   "concern_note": string,      // tone을 그렇게 정한 근거. reassure면 "" 가능
-  "observations": [string]     // 대화에서 눈에 띈 키워드 목록. 없으면 []
+  "observations": [string],    // 대화에서 눈에 띈 키워드 목록. 없으면 []
+  "recommend_center_search": boolean  // 치매센터찾기 페이지 링크를 보여줄지. tone이 suggest_consult일 때만 true 가능, 그 안에서도 정말 필요할 때만
 }}
 
 # tone 값 (이 4개 외에는 쓰지 마세요)
@@ -213,8 +236,9 @@ SUMMARY_SYSTEM_PROMPT = f"""당신은 어르신과 나눈 하루 대화를 요�
 - suggest_consult: 전문가 상담을 권할 정도의 신호
 
 # 그 외 규칙
-9. JSON 외에 어떤 설명, 인사, 마크다운 코드블록도 붙이지 마세요.
-10. 대화가 거의 없거나 너무 짧으면, summary는 짧게 쓰고 tone은 neutral로 두세요.
+10. JSON 외에 어떤 설명, 인사, 마크다운 코드블록도 붙이지 마세요.
+11. 대화가 거의 없거나 너무 짧으면, summary는 짧게 쓰고 tone은 neutral로,
+    recommend_center_search는 false로 두세요.
 """
 
 # 안심 / 우려 / 애매 세 케이스를 각각 보여주는 few-shot 예시
@@ -236,7 +260,8 @@ FEW_SHOT_EXAMPLES = [
             '{"summary": "며칠째 새벽에 깨는 등 수면에 어려움. 낮 활동(산책)은 정상적으로 유지 중.", '
             '"tone": "observe", '
             '"concern_note": "사나흘째 수면 문제가 이어져 지켜보길 권함. 낮 생활은 지장 없음.", '
-            '"observations": ["새벽에 깸", "수면 부족", "산책 유지"]}'
+            '"observations": ["새벽에 깸", "수면 부족", "산책 유지"], '
+            '"recommend_center_search": false}'
         ),
     },
     {
@@ -253,7 +278,8 @@ FEW_SHOT_EXAMPLES = [
         "content": (
             '{"summary": "오늘은 편안한 하루. 식사와 산책을 규칙적으로 하셨다고 함.", '
             '"tone": "reassure", "concern_note": "", '
-            '"observations": ["규칙적 식사", "산책"]}'
+            '"observations": ["규칙적 식사", "산책"], '
+            '"recommend_center_search": false}'
         ),
     },
     {
@@ -273,7 +299,8 @@ FEW_SHOT_EXAMPLES = [
             '{"summary": "다리 통증으로 힘든 하루. 통증 때문에 집중이 흐트러지고 '
             '하던 일을 끝까지 마무리하지 못함.", '
             '"tone": "neutral", "concern_note": "", '
-            '"observations": ["다리 통증", "일시적 산만함"]}'
+            '"observations": ["다리 통증", "일시적 산만함"], '
+            '"recommend_center_search": false}'
         ),
     },
     {
@@ -295,7 +322,8 @@ FEW_SHOT_EXAMPLES = [
             '{"summary": "다리 통증으로 힘든 하루. 통증 때문에 집중이 흐트러지고 '
             '하던 일을 끝까지 마무리하지 못함.", '
             '"tone": "neutral", "concern_note": "", '
-            '"observations": ["다리 통증", "일시적 산만함"]}'
+            '"observations": ["다리 통증", "일시적 산만함"], '
+            '"recommend_center_search": false}'
         ),
     },
     {
@@ -319,7 +347,8 @@ FEW_SHOT_EXAMPLES = [
             '"concern_note": "전기포트를 켠 채 외출해 화재 위험이 있었던 안전 직결 '
             '사건입니다. 같은 날 남편 이름이 바로 떠오르지 않고 지갑을 잃어버리는 '
             '일도 있어, 치매 상담 및 안내 서비스를 이용해 보시길 권합니다.", '
-            '"observations": ["전기포트 켜둔 채 외출", "이름이 안 떠오름", "지갑 분실"]}'
+            '"observations": ["전기포트 켜둔 채 외출", "이름이 안 떠오름", "지갑 분실"], '
+            '"recommend_center_search": true}'
         ),
     },
     {
@@ -337,7 +366,8 @@ FEW_SHOT_EXAMPLES = [
             '{"summary": "가스불을 끄지 않고 나온 일이 있었고, 그 외에는 특별한 일은 없었다고 하셨습니다.", '
             '"tone": "observe", '
             '"concern_note": "가스불을 켠 채 외출해 화재 위험이 있었던 사안입니다. 안전을 위해 확인이 필요합니다. 다른 특별한 일은 없다고 하셨습니다.", '
-            '"observations": ["가스불 끄지 않고 외출"]}'
+            '"observations": ["가스불 끄지 않고 외출"], '
+            '"recommend_center_search": false}'
         ),
     },
     {
@@ -360,7 +390,8 @@ FEW_SHOT_EXAMPLES = [
             '"concern_note": "가족을 못 알아보고 길을 잃는 등 기억·지남력 문제가 '
             '이틀 사이 갑자기 나타났습니다. 치매 상담 및 안내 서비스를 이용해 '
             '보시길 권합니다.", '
-            '"observations": ["가족을 못 알아봄", "길에서 헤맴", "갑작스러운 증상"]}'
+            '"observations": ["가족을 못 알아봄", "길에서 헤맴", "갑작스러운 증상"], '
+            '"recommend_center_search": true}'
         ),
     },
     {
@@ -371,7 +402,29 @@ FEW_SHOT_EXAMPLES = [
         "role": "assistant",
         "content": (
             '{"summary": "짧은 대화로 특이사항 확인 어려움.", '
-            '"tone": "neutral", "concern_note": "", "observations": []}'
+            '"tone": "neutral", "concern_note": "", "observations": [], '
+            '"recommend_center_search": false}'
+        ),
+    },
+    {
+        "role": "user",
+        "content": (
+            "오늘 대화:\n"
+            "user: 요즘 자꾸 깜빡깜빡해서 이미 병원 예약해뒀어. 다음 주에 진료 보러 가.\n"
+            "assistant: 잘하셨어요. 그 외에는 어떠셨어요?\n"
+            "user: 그거 말고는 똑같았어."
+        ),
+    },
+    {
+        "role": "assistant",
+        "content": (
+            '{"summary": "건망증이 잦아 병원 진료를 이미 예약해두셨고, 그 외에는 '
+            '평소와 같은 하루를 보내셨습니다.", '
+            '"tone": "suggest_consult", '
+            '"concern_note": "건망증이 잦아 병원 진료를 예약해두신 상태입니다. '
+            '이미 진료 경로를 확보하셨습니다.", '
+            '"observations": ["건망증", "병원 진료 예약함"], '
+            '"recommend_center_search": false}'
         ),
     },
 ]
@@ -477,19 +530,21 @@ def _empty_result() -> dict:
         "tone": "neutral",
         "concern_note": "",
         "observations": [],
+        "recommend_center_search": False,
     }
- 
- 
+
+
 def _fallback_result() -> dict:
     """
     LLM 호출이나 검증에 실패했을 때 돌려줄 안전한 기본값.
-    화면이 깨지지 않도록 4개 키를 모두 채워서 반환한다.
+    화면이 깨지지 않도록 5개 키를 모두 채워서 반환한다.
     """
     return {
         "summary": "오늘 대화를 요약하지 못했습니다.",
         "tone": "neutral",
         "concern_note": "",
         "observations": [],
+        "recommend_center_search": False,
     }
 
 

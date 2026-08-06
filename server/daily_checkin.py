@@ -54,7 +54,7 @@ else:
     print("Warning: Supabase credentials not found for daily_checkin.")
 
 _TABLE = "daily_checkins"
-_CHECKIN_FIELDS = "summary, tone, concern_note, observations, checkin_date, created_at"
+_CHECKIN_FIELDS = "summary, tone, concern_note, observations, recommend_center_search, checkin_date, created_at"
 
 
 class DuplicateCheckinError(Exception):
@@ -102,6 +102,7 @@ def save_checkin(user_id: str, result: dict, turn_count: int) -> dict:
         "tone": result["tone"],
         "concern_note": result["concern_note"],
         "observations": result["observations"],
+        "recommend_center_search": result["recommend_center_search"],
         "turn_count": turn_count,
     }
 

@@ -22,7 +22,7 @@ from server.agent import build_agent
 from server.context_loader import load_context, save_and_summarize
 import json
 from server.auth import verify_token
-from server.daily_summary_backup2 import summarize_checkin
+from server.daily_summary import summarize_checkin
 from server.daily_checkin import (
     get_today_checkin,
     save_checkin,
@@ -199,7 +199,7 @@ def checkin_turn(request: CheckinRequest, user=Depends(verify_token)):
     대화 턴 처리 + 완료 시 저장을 겸한다.
     - 대화를 더 이어가야 하면: {"type": "turn", "reply": "..."}
     - 마무리할 시점이면: 요약을 생성해 daily_checkins에 저장하고
-      {"type": "complete", "summary", "tone", "concern_note", "observations"}
+      {"type": "complete", "summary", "tone", "concern_note", "observations", "recommend_center_search"}
     """
     user_id = user["sub"]
     messages = request.messages
@@ -229,6 +229,7 @@ def checkin_turn(request: CheckinRequest, user=Depends(verify_token)):
         "tone": result["tone"],
         "concern_note": result["concern_note"],
         "observations": result["observations"],
+        "recommend_center_search": result["recommend_center_search"],
     }
 
 
