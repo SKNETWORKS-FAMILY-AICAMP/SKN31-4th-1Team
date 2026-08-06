@@ -22,6 +22,13 @@ from server.agent import build_agent
 from server.context_loader import load_context, save_and_summarize
 import json
 from server.auth import verify_token
+from server.daily_summary import summarize_checkin
+from server.daily_checkin import (
+    get_today_checkin,
+    save_checkin,
+    decide_next_turn,
+    DuplicateCheckinError,
+)
 
 app = FastAPI(
     title="치매 안내 챗봇 API",
@@ -45,6 +52,9 @@ app.add_middleware(
 )
 
 class ChatRequest(BaseModel):
+    messages: List[Dict[str, str]]
+
+class CheckinRequest(BaseModel):
     messages: List[Dict[str, str]]
 
 is_first_health_check = True
@@ -129,3 +139,109 @@ def chat_endpoint(request: ChatRequest, background_tasks: BackgroundTasks, user=
         "session_id": user_id,
         "response": response_data
     }
+
+# --- 회원 탈퇴 엔드포인트 ---
+@app.delete("/api/delete-account")
+def delete_account(user=Depends(verify_token)):
+    user_id = user["sub"]
+    try:
+        from supabase import create_client, Client
+        supabase_url = os.getenv("SUPABASE_URL")
+        supabase_service_key = os.getenv("SUPABASE_SERVICE_KEY")
+        
+        if not supabase_url or not supabase_service_key:
+            print("Delete Account Error: Supabase Service Key is not configured on the server.")
+            raise HTTPException(status_code=500, detail="회원 탈퇴 처리 중 오류가 발생했습니다.")
+            
+        # Admin 클라이언트 생성 (service_role)
+        supabase_admin: Client = create_client(supabase_url, supabase_service_key)
+        
+        # 유저 삭제 전에 아바타 이미지 정리 (avatars 버킷 내 유저 폴더)
+        try:
+            # avatars 버킷의 사용자 폴더 내 파일 목록 조회
+            files = supabase_admin.storage.from_("avatars").list(user_id)
+            if files:
+                file_paths = [f"{user_id}/{f['name']}" for f in files]
+                # 파일 일괄 삭제
+                supabase_admin.storage.from_("avatars").remove(file_paths)
+        except Exception as e:
+            # 파일 삭제 실패가 유저 삭제 실패로 이어지지 않게 처리
+            print(f"Delete Avatars Error (Ignored): {e}")
+
+        # 유저 삭제 실행
+        supabase_admin.auth.admin.delete_user(user_id)
+        return {"status": "success", "message": "계정이 성공적으로 탈퇴 처리되었습니다."}
+    except HTTPException:
+        # 이미 우리가 던진 HTTPException은 그대로 통과
+        raise
+    except Exception as e:
+        print(f"Delete Account Error: {e}")
+        raise HTTPException(status_code=500, detail="회원 탈퇴 처리 중 오류가 발생했습니다.")
+
+# --- 오늘의 대화 (데일리 체크인) ---
+# 프론트엔드 계약: mds/daily_checkin_widget_guide.md 3절
+# (dementia_front 저장소에 이미 구현·배포됨. 이 계약대로 응답해야 한다)
+
+@app.get("/api/checkin/today")
+def checkin_today(user=Depends(verify_token)):
+    """오늘(KST) 이미 체크인했는지 조회. 프론트가 예방 탭 진입 시 1회 호출한다."""
+    user_id = user["sub"]
+    checkin = get_today_checkin(user_id)
+    if checkin:
+        return {"checked_in": True, "checkin": checkin}
+    return {"checked_in": False, "checkin": None}
+
+
+@app.post("/api/checkin")
+def checkin_turn(request: CheckinRequest, user=Depends(verify_token)):
+    """
+    대화 턴 처리 + 완료 시 저장을 겸한다.
+    - 대화를 더 이어가야 하면: {"type": "turn", "reply": "..."}
+    - 마무리할 시점이면: 요약을 생성해 daily_checkins에 저장하고
+      {"type": "complete", "summary", "tone", "concern_note", "observations"}
+    """
+    user_id = user["sub"]
+    messages = request.messages
+
+    decision = decide_next_turn(messages)
+
+    if decision["action"] == "continue":
+        return {"type": "turn", "reply": decision["reply"]}
+
+    # action == "finish": 구조화된 요약 생성 (tone 검증은 summarize_checkin 내부에서 처리)
+    result = summarize_checkin(messages)
+    user_turn_count = sum(1 for m in messages if m.get("role") == "user")
+
+    try:
+        save_checkin(user_id, result, user_turn_count)
+    except DuplicateCheckinError:
+        # 다른 탭/기기에서 이미 오늘 체크인을 완료한 경우.
+        # 프론트는 이 응답을 받으면 최신 상태를 재조회해 정상 완료 흐름으로 처리한다.
+        raise HTTPException(status_code=409, detail="이미 오늘의 체크인을 완료했습니다.")
+    except Exception as e:
+        print(f"Save Checkin Error: {e}")
+        raise HTTPException(status_code=500, detail="체크인 저장 중 오류가 발생했습니다.")
+
+    return {
+        "type": "complete",
+        "summary": result["summary"],
+        "tone": result["tone"],
+        "concern_note": result["concern_note"],
+        "observations": result["observations"],
+    }
+
+
+# --- Keepalive 엔드포인트: DB활성화 ---
+@app.get("/keepalive")
+def keepalive():
+    from graph_db.graph_search_tool import _run_query
+    from qdrant_client import QdrantClient
+
+    # Neo4j CUD (더미 노드 생성 후 즉시 삭제)
+    _run_query("CREATE (k:_Keepalive {ts: datetime()}) WITH k DELETE k")
+
+    # Qdrant read
+    client = QdrantClient(url=os.environ["QDRANT_URL"], api_key=os.environ["QDRANT_API_KEY"])
+    info = client.get_collection("dementia_guideline")
+
+    return {"neo4j": "ok", "qdrant": info.points_count}
