@@ -59,7 +59,7 @@
 ### 1.4 시스템 아키텍쳐
 
 <div align="center">
-<img src="산출물/images/WBS.svg" width="1000">
+<img src="산출물/images/시스템플로우.png" width="800">
 </div>
 
 ### 1.5 WBS
@@ -124,16 +124,17 @@ GraphDB, VectorDB)를 완성하는 데 집중했다면, 4차는 그 코어를 �
 
 <br>
 
-## 3. 예시 화면
-## 화면
+## 3. UI / 화면 구성
+
 - [화면정의서](https://sknetworks-family-aicamp.github.io/SKN31-4th-1Team/산출물/화면정의서.html)
 
-![서비스 데모](산출물/images/demo11.gif)
+- 실행화면
+
+  ![서비스 데모](산출물/images/demo11.gif)
+
+
+
 ---
-
-
-
-
 ## 4. 디렉토리 구조
 
 ```
