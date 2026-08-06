@@ -22,7 +22,7 @@ from server.agent import build_agent
 from server.context_loader import load_context, save_and_summarize
 import json
 from server.auth import verify_token
-from server.daily_summary import summarize_checkin
+from server.daily_summary_backup2 import summarize_checkin
 from server.daily_checkin import (
     get_today_checkin,
     save_checkin,
