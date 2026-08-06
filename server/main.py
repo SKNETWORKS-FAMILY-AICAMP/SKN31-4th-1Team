@@ -56,6 +56,7 @@ class ChatRequest(BaseModel):
 
 class CheckinRequest(BaseModel):
     messages: List[Dict[str, str]]
+    is_finishing: bool = False  # "대화 마치기" 버튼을 직접 눌렀는지 (decide_next_turn에 전달)
 
 is_first_health_check = True
 
@@ -203,7 +204,7 @@ def checkin_turn(request: CheckinRequest, user=Depends(verify_token)):
     user_id = user["sub"]
     messages = request.messages
 
-    decision = decide_next_turn(messages)
+    decision = decide_next_turn(messages, force_finish=request.is_finishing)
 
     if decision["action"] == "continue":
         return {"type": "turn", "reply": decision["reply"]}

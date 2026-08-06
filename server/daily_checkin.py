@@ -179,13 +179,20 @@ def _fallback_next_question() -> str:
     return "그러셨군요. 오늘 다른 특별한 일은 없으셨어요?"
 
 
-def decide_next_turn(messages: list[dict]) -> dict:
+def decide_next_turn(messages: list[dict], force_finish: bool = False) -> dict:
     """
     지금까지의 대화(messages)를 보고 계속 이어갈지 마무리할지 판단한다.
 
     Args:
         messages: [{"role": "user"|"assistant", "content": "..."}, ...]
             프론트엔드가 보내는 전체 대화(초기 인사말 포함).
+        force_finish: 사용자가 "대화 마치기" 버튼을 직접 눌렀다는 명시적 신호.
+            True면 최소 턴 수 가드나 LLM의 "아직 이르다"는 판단과 무관하게
+            즉시 마무리한다 — 사용자가 명시적으로 끝내겠다고 한 의사를
+            LLM의 암묵적 추측(대화 내용만 보고 "아직 3턴이 안 됐다"는 식)이
+            덮어쓰지 않게 하기 위함. 최소 1턴(사용자 발화 1회) 이상일 때만
+            적용한다 — 0턴에서는 프론트가 애초에 버튼을 비활성화하지만,
+            방어적으로 한 번 더 확인한다.
 
     Returns:
         {"action": "continue", "reply": str} 또는 {"action": "finish", "reply": str}
@@ -193,6 +200,12 @@ def decide_next_turn(messages: list[dict]) -> dict:
          server/daily_summary.py의 summarize_checkin이 별도로 만든다)
     """
     user_turns = sum(1 for m in messages if m.get("role") == "user")
+
+    # 사용자가 명시적으로 마치기를 눌렀다면, LLM 호출 없이 곧바로 마무리한다.
+    # (기존엔 이 신호가 없어서 최소 턴 가드와 LLM의 "3턴 정도가 적당하다"는
+    # 프롬프트 지침 때문에, 1~2턴 만에 마치기를 눌러도 계속 무시되고 있었다.)
+    if force_finish and user_turns >= 1:
+        return {"action": "finish", "reply": ""}
 
     # 코드 레벨 안전장치 (프롬프트 판단보다 우선)
     if user_turns < _MIN_USER_TURNS_BEFORE_FINISH:
