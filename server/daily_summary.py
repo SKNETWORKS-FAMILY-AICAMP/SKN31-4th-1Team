@@ -83,6 +83,14 @@ TONE_VALUES = [
 # summarize_checkin이 반드시 돌려줘야 하는 키 목록
 SUMMARY_OUTPUT_KEYS = ["summary", "tone", "concern_note", "observations"]
 
+# 6번 규칙(위험/우려 축소 표현 금지)을 프롬프트만 믿지 않고 코드로도 걸러내기 위한 목록.
+# summary/concern_note 어디에도 이 표현들이 들어가면 안 됨.
+BANNED_MINIMIZING_PHRASES = [
+    "가볍게",
+    "별일 아니지만",
+    "크게 걱정할 정도는 아니지만",
+]
+
 
 
 def is_valid_summary(data: dict) -> tuple[bool, str]:
@@ -123,6 +131,15 @@ def is_valid_summary(data: dict) -> tuple[bool, str]:
             f"'{data['tone']}' tone인데 concern_note가 채워져 있음 "
             f"(우려 내용이 있다면 tone을 observe 이상으로 올려야 함): {concern_note}"
         )
+
+    # 6번 규칙: summary/concern_note에 위험·우려를 축소하는 표현이 있으면 안 됨
+    # (프롬프트 지시만으로는 가끔 안 지켜지므로 코드로 한 번 더 거른다)
+    summary_text = data.get("summary", "")
+    if not isinstance(summary_text, str):
+        return False, "summary가 문자열이 아님"
+    for phrase in BANNED_MINIMIZING_PHRASES:
+        if phrase in concern_note or phrase in summary_text:
+            return False, f"금지된 축소 표현 포함('{phrase}'): summary/concern_note를 다시 확인 필요"
 
     return True, ""
 
@@ -168,6 +185,12 @@ SUMMARY_SYSTEM_PROMPT = f"""당신은 어르신과 나눈 하루 대화를 요�
    신호(가족을 못 알아봄, 길을 잃음, 같은 질문 반복 등)라면 concern_note에
    "치매입니다" 같은 진단명 단정 없이, 우리 서비스의 치매 상담 및 안내
    서비스를 이용해보시길 권하는 문구를 반드시 포함해라.
+8. 5번 규칙에 해당하는 안전 직결 사건(가스불/문 잠금/복용약/전기포트 등)과
+   인지 관련 신호(이름/사람을 바로 못 알아봄, 물건을 잃어버림, 방향을
+   헷갈림 등)가 같은 날 대화에 함께 나타나면, 그 인지 신호가 그날 처음
+   나온 것이라도 tone을 observe가 아니라 suggest_consult로 올려라.
+   이 경우 concern_note에는 안전 사건 내용과 7번 규칙에 따른 치매 상담 및
+   안내 서비스 이용 권유 문구를 함께 써라.
 
 # 임무
 그날 나눈 대화(messages)를 읽고 아래 4개 항목을 채워 JSON으로 출력하세요.
@@ -190,8 +213,8 @@ SUMMARY_SYSTEM_PROMPT = f"""당신은 어르신과 나눈 하루 대화를 요�
 - suggest_consult: 전문가 상담을 권할 정도의 신호
 
 # 그 외 규칙
-7. JSON 외에 어떤 설명, 인사, 마크다운 코드블록도 붙이지 마세요.
-8. 대화가 거의 없거나 너무 짧으면, summary는 짧게 쓰고 tone은 neutral로 두세요.
+9. JSON 외에 어떤 설명, 인사, 마크다운 코드블록도 붙이지 마세요.
+10. 대화가 거의 없거나 너무 짧으면, summary는 짧게 쓰고 tone은 neutral로 두세요.
 """
 
 # 안심 / 우려 / 애매 세 케이스를 각각 보여주는 few-shot 예시
@@ -279,6 +302,30 @@ FEW_SHOT_EXAMPLES = [
         "role": "user",
         "content": (
             "오늘 대화:\n"
+            "user: 아까 전기포트를 켠 채로 나갔다 왔지 뭐야. 다행히 집은 무사했어.\n"
+            "assistant: 많이 놀라셨겠어요. 그 외에는 어떠셨어요?\n"
+            "user: 아까 남편 이름이 갑자기 딱 안 떠오르더라고. 그리고 지갑도 잃어버렸어.\n"
+            "assistant: 저런, 지갑은 찾으셨어요?\n"
+            "user: 다행히 찾긴 했어."
+        ),
+    },
+    {
+        "role": "assistant",
+        "content": (
+            '{"summary": "전기포트를 켠 채 외출해 화재로 이어질 뻔한 일이 있었고, '
+            '남편 이름이 바로 떠오르지 않거나 지갑을 잃어버리는 일도 있었습니다. '
+            '다행히 집은 무사했고 지갑도 다시 찾으셨습니다.", '
+            '"tone": "suggest_consult", '
+            '"concern_note": "전기포트를 켠 채 외출해 화재 위험이 있었던 안전 직결 '
+            '사건입니다. 같은 날 남편 이름이 바로 떠오르지 않고 지갑을 잃어버리는 '
+            '일도 있어, 치매 상담 및 안내 서비스를 이용해 보시길 권합니다.", '
+            '"observations": ["전기포트 켜둔 채 외출", "이름이 안 떠오름", "지갑 분실"]}'
+        ),
+    },
+    {
+        "role": "user",
+        "content": (
+            "오늘 대화:\n"
             "user: 아까 나오는데 가스불을 안 끄고 나온 걸 알았어. 다행히 별일은 없었어.\n"
             "assistant: 많이 놀라셨겠어요. 그 외에는 별일 없으셨어요?\n"
             "user: 응, 그거 말고는 특별한 일 없었어."
@@ -291,6 +338,29 @@ FEW_SHOT_EXAMPLES = [
             '"tone": "observe", '
             '"concern_note": "가스불을 켠 채 외출해 화재 위험이 있었던 사안입니다. 안전을 위해 확인이 필요합니다. 다른 특별한 일은 없다고 하셨습니다.", '
             '"observations": ["가스불 끄지 않고 외출"]}'
+        ),
+    },
+    {
+        "role": "user",
+        "content": (
+            "오늘 대화:\n"
+            "user: 어머니가 며칠 전부터 갑자기 나를 못 알아보셔.\n"
+            "assistant: 언제부터 그러셨어요?\n"
+            "user: 이틀 됐나. 어제는 집도 못 찾아서 길에서 헤매고 계시더라고.\n"
+            "assistant: 많이 놀라셨겠어요.\n"
+            "user: 응, 너무 갑작스러워서 어떻게 해야 할지 모르겠어."
+        ),
+    },
+    {
+        "role": "assistant",
+        "content": (
+            '{"summary": "이틀 전부터 가족을 못 알아보고, 길에서 집을 찾지 못해 '
+            '헤매는 일이 갑작스럽게 나타남.", '
+            '"tone": "suggest_consult", '
+            '"concern_note": "가족을 못 알아보고 길을 잃는 등 기억·지남력 문제가 '
+            '이틀 사이 갑자기 나타났습니다. 치매 상담 및 안내 서비스를 이용해 '
+            '보시길 권합니다.", '
+            '"observations": ["가족을 못 알아봄", "길에서 헤맴", "갑작스러운 증상"]}'
         ),
     },
     {
@@ -481,6 +551,13 @@ TEST_CASES = [
         {"role": "user", "content": "지갑도 두고 오고, 우산도 두고 오고 그러네."},
         {"role": "assistant", "content": "요즘 자주 그러세요?"},
         {"role": "user", "content": "요 며칠 유독 그런 것 같아."},
+    ]),
+    ("안전 사건 + 인지 신호 동시 발생 - suggest_consult로 격상 확인", [
+        {"role": "user", "content": "아까 전기포트를 켠 채로 나갔다 왔지 뭐야. 다행히 집은 무사했어."},
+        {"role": "assistant", "content": "많이 놀라셨겠어요. 그 외에는 어떠셨어요?"},
+        {"role": "user", "content": "아까 남편 이름이 갑자기 딱 안 떠오르더라고. 그리고 지갑도 잃어버렸어."},
+        {"role": "assistant", "content": "저런, 지갑은 찾으셨어요?"},
+        {"role": "user", "content": "다행히 찾긴 했어."},
     ]),
 
     
