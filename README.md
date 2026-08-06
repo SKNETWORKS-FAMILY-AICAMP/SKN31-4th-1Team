@@ -56,12 +56,22 @@
 </p>
 
 ---
-
-### 1.4 WBS
+### 1.4 시스템 아키텍쳐
 
 <div align="center">
 <img src="산출물/images/WBS.svg" width="1000">
 </div>
+
+### 1.5 WBS
+
+<details>
+<summary>펼치기</summary>
+
+<div align="center">
+<img src="산출물/images/WBS.svg" width="1000">
+</div>
+
+</details>
 
 ---
 
