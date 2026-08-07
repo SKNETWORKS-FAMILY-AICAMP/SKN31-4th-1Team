@@ -12,11 +12,32 @@
 ---
 
 ### 1.2 팀원 및 담당업무
-| 유진영 | 박연아 | 김효민 | 김동민 |
-| :---: | :---: | :---: | :---: |
-| <a href="https://github.com/ujneg18-source"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a> | <a href="https://github.com/yeona9549"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a> | <a href="https://github.com/hyomin0357"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a> | <a href="https://github.com/hyomin0357"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a> |
-| <img src="산출물/images/슬픔이.png" width="150" height="150"> | <img src="산출물/images/부럽이.png" width="150" height="150"> | <img src="산출물/images/기쁨이.png" width="150" height="150"> | <img src="산출물/images/당황이.png" width="150" height="150"> |
-| **GraphDB 설계**<br><sub>데이터 수집 및 전처리</sub><br><sub>Agent Tool 개발</sub> | **백엔드**<br><sub>LangGraph·AI Agent 설계</sub><br><sub>프롬프트 엔지니어링</sub> | **PM · 백엔드**<br><sub>LangGraph·AI Agent 설계</sub><br><sub>프롬프트 엔지니어링</sub> | **프론트엔드**<br><sub>웹UI 구현(챗봇 인터페이스)</sub><br><sub>백엔드 API 연동</sub> |
+<table align="center" style="width:100%; table-layout:fixed; text-align:center;">
+  <tr>
+    <th style="width:25%;">유진영</th>
+    <th style="width:25%;">박연아</th>
+    <th style="width:25%;">김효민</th>
+    <th style="width:25%;">김동민</th>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ujneg18-source"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
+    <td><a href="https://github.com/yeona9549"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
+    <td><a href="https://github.com/hyomin0357"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
+    <td><a href="https://github.com/여기에_김동민_깃허브아이디"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
+  </tr>
+  <tr>
+    <td><img src="산출물/images/슬픔이.png" width="100%"></td>
+    <td><img src="산출물/images/부럽이.png" width="100%"></td>
+    <td><img src="산출물/images/기쁨이.png" width="100%"></td>
+    <td><img src="산출물/images/당황이.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><b>GraphDB 설계</b><br><sub>데이터 수집 및 전처리</sub><br><sub>Agent Tool 개발</sub></td>
+    <td><b>백엔드</b><br><sub>LangGraph·AI Agent 설계</sub><br><sub>프롬프트 엔지니어링</sub></td>
+    <td><b>PM · 백엔드</b><br><sub>LangGraph·AI Agent 설계</sub><br><sub>프롬프트 엔지니어링</sub></td>
+    <td><b>프론트엔드</b><br><sub>웹UI 구현(챗봇 인터페이스)</sub><br><sub>백엔드 API 연동</sub></td>
+  </tr>
+</table>
 
 ---
 
@@ -118,7 +139,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 
 ---
 
-## 2. `subjects` — "우리 엄마 등록해두는 곳"
+## 2. `subjects` — 우리 엄마 등록해두는 곳
 
 보호자가 상담 챗봇에서 "저희 어머니가 요즘..." 하고 이야기를 시작하면, 그 어머니에
 대한 기본 정보(관계, 나이, 사는 곳)가 여기 한 행으로 저장된다. 한 사람이 여러 명
@@ -134,7 +155,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 | `created_at` | timestamptz | | 이 대상자를 처음 등록한 시각 |
 | `updated_at` | timestamptz | | 정보를 마지막으로 고친 시각 |
 
-## 3. `state` — "그 가족의 지금 상태 요약본"
+## 3. `state` — 그 가족의 지금 상태 요약본
 
 `subjects`에서 등록한 그 가족 한 명당 딱 1행만 존재한다(1:1). 상담하면서 AI가
 파악한 증상·기간 같은 걸 여기에 정리해서 쌓아두고, 다음에 다시 상담할 때 "아, 전에
@@ -146,7 +167,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 | `data` | jsonb | | 증상·지속기간·위험신호 등을 한 덩어리로 담은 값. 예: `{"symptoms": ["반복질문"], "duration": "6개월"}` |
 | `updated_at` | timestamptz | | 이 상태 정보가 마지막으로 갱신된 시각 |
 
-## 4. `contexts` — "상담 챗봇과 나눈 대화 기록"
+## 4. `contexts` — 상담 챗봇과 나눈 대화 기록
 
 사용자가 AI 상담 챗봇(`/prompt`)에서 대화를 시작하면 세션 하나가 여기 한 행으로
 생긴다. 대화 원문을 그대로 다 쌓아두면 너무 커지니까, "요약 + 최근 대화 몇 마디"만
@@ -160,7 +181,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 | `created_at` | timestamptz | | 이 세션이 처음 시작된 시각 |
 | `updated_at` | timestamptz | | 가장 최근에 대화가 오간 시각 |
 
-## 5. `daily_checkins` — "오늘 하루 어땠는지 짧게 체크인한 기록"
+## 5. `daily_checkins` — 오늘 하루 어땠는지 짧게 체크인한 기록
 
 예방 탭 맨 위에 있는 "오늘의 대화" 위젯에서 나온 결과다. 로그인 사용자가 AI와
 3~5턴 정도 짧게 대화하고 나면, 그 대화를 AI가 요약해서 여기 **하루에 딱 1행만**
@@ -179,7 +200,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 | `turn_count` | int4 | | 그날 몇 마디나 주고받았는지 |
 | `created_at` | timestamptz | | 이 체크인이 저장된 시각 |
 
-## 6. `game_scores` — "두뇌 게임 플레이 기록"
+## 6. `game_scores` — 두뇌 게임 플레이 기록
 
 스도쿠·카드 짝 맞추기 같은 두뇌 게임을 한 판 끝낼 때마다 여기 한 행씩 쌓인다.
 하루에 여러 번 해도 되고, 통계 페이지에서 이 기록들을 모아 그래프로 보여준다.
@@ -195,7 +216,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 | `played_at` | timestamptz | | 정확히 몇 시 몇 분에 플레이했는지 |
 | `created_at` | timestamptz | | 이 기록이 저장된 시각 |
 
-## 7. `posts` — "예방 정보 게시글" (사용자와 무관한 독립 테이블)
+## 7. `posts` — 예방 정보 게시글 (사용자와 무관한 독립 테이블)
 
 관리자가 미리 써서 올려두는 예방 정보 글이다. 로그인 여부와 상관없이 누구나 읽을 수
 있고, 사용자별로 다른 게 아니라 모두에게 똑같이 보이는 콘텐츠라 `user_id` 컬럼
@@ -218,7 +239,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 
 ---
 
-## 8. "누가 이 테이블에 쓰기(저장)를 하는가" — 의외로 다 다르다
+## 8. 누가 이 테이블에 쓰기(저장)를 하는가 — 의외로 다 다르다
 
 같은 "사용자 데이터"처럼 보여도, 실제로 누가 그 값을 DB에 써넣는지는 테이블마다
 다르다. 헷갈리기 쉬운 부분이라 따로 짚어둔다.
