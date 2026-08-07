@@ -14,28 +14,28 @@
 ### 1.2 팀원 및 담당업무
 <table align="center" style="width:100%; table-layout:fixed; text-align:center;">
   <tr>
-    <th style="width:25%;">유진영</th>
-    <th style="width:25%;">박연아</th>
-    <th style="width:25%;">김효민</th>
-    <th style="width:25%;">김동민</th>
+    <th style="width:50%;">김효민</th>
+    <th style="width:50%;">유진영</th>
+    <th style="width:50%;">박연아</th>
+    <th style="width:50%;">김동민</th>
   </tr>
   <tr>
+    <td><a href="https://github.com/hyomin0357"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
     <td><a href="https://github.com/ujneg18-source"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
     <td><a href="https://github.com/yeona9549"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
-    <td><a href="https://github.com/hyomin0357"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
     <td><a href="https://github.com/여기에_김동민_깃허브아이디"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
   </tr>
   <tr>
+    <td><img src="산출물/images/기쁨이.png" width="150" height="150"> </td>
     <td><img src="산출물/images/슬픔이.png" width="150" height="150"></td>
     <td><img src="산출물/images/부럽이.png" width="150" height="150"></td>
-    <td><img src="산출물/images/기쁨이.png" width="150" height="150"> </td>
     <td><img src="산출물/images/당황이.png" width="150" height="150"></td>
   </tr>
   <tr>
-    <td><b>GraphDB 설계</b><br><sub>데이터 수집 및 전처리</sub><br><sub>Agent Tool 개발</sub></td>
-    <td><b>백엔드</b><br><sub>LangGraph·AI Agent 설계</sub><br><sub>프롬프트 엔지니어링</sub></td>
-    <td><b>PM · 백엔드</b><br><sub>LangGraph·AI Agent 설계</sub><br><sub>프롬프트 엔지니어링</sub></td>
-    <td><b>프론트엔드</b><br><sub>웹UI 구현(챗봇 인터페이스)</sub><br><sub>백엔드 API 연동</sub></td>
+    <td><b>PM · 데이터</b><br><sub>데이터 수집 및 포스팅</sub><br><sub>산출물 총괄</sub></td>
+    <td><b>GraphDB · 데이터</b><br><sub>GraphDB · VectorDB 설계</sub><br><sub>데이터 수집 및 포스팅</sub></td>
+    <td><b>백엔드</b><br><sub>오늘의 대화 챗봇 로직 구현</sub><br><sub>데이터 수집 및 포스팅</sub></td>
+    <td><b>프론트엔드</b><br><sub>웹UI 구현(센터지도, 치매 예방 게임)</sub><br><sub>백엔드 API 연동</sub></td>
   </tr>
 </table>
 
@@ -265,7 +265,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 <summary>펼치기</summary>
 
 <div align="center">
-<img src="산출물/images/WBS.svg" width="1000">
+<img src="산출물/images/wbs.png" width="1000">
 </div>
 
 </details>
@@ -311,12 +311,13 @@ GraphDB, VectorDB)를 완성하는 데 집중했다면, 4차는 그 코어를 �
 | 구분 | 기능 | 설명 |
 |------|------|------|
 | **메인** | 서비스 랜딩 | 치매 정보 알리미 및 예방 플랫폼 소개 |
-| **정보** | 치매 예방 가이드 | 일상생활 수칙, 식습관, 운동, 수면 등 카테고리별 건강 가이드라인 제공 |
-| **게시판** | 목록 조회 | 커뮤니티에 작성된 예방 관련 정보 및 후기 리스트 렌더링 |
-| **미디어**| 이미지 업로드 | 게시글 내 첨부 이미지 업로드 및 최적화 처리 |
+| **계정** | 계정 관리 | 회원가입, 탈퇴, 비밀번호 수정 등 회원정보 관리 |
+| **정보** | 치매 예방 정보 제공 | 일상생활 수칙, 식습관, 운동, 수면 등 카테고리별 건강 정보 제공 |
+| **정보**| 추천 게시물 | 관리자가 지정한 주요 게시물을 추천 탭 상단 배너에 노출하는 기능 |
+| **관리자**| 정보 포스트 관리 | 치매 예방 관련 정보 및 포스팅 콘텐츠를 등록하고 관리 |
 | **게임**| 치매 예방 게임 | 뇌 활성화를 위한 인지 기능 향상 게임 제공 |
 | **게임**| 내 게임 기록 차트 | 사용자별 기록을 시각적 차트로 제공하여 인지 변화 추이 관리 |
-| **서비스**| 치매센터 찾기 | 사용자 위치 기반/지역 검색을 통한 전국 치매안심센터 위치 및 연락처 정보 안내 |
+| **서비스**| 치매센터 찾기 | 사용자 위치 기반/지역 검색을 통한 전국 치매안심센터 위치, 연락처 및 프로그램 정보 안내 |
 | **건강**| 오늘의 체크 | 일상의 특이사항을 기록/점검하는 데일리 체크리스트 |
 
 <br>
