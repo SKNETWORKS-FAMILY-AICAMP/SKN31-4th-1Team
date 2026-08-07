@@ -20,22 +20,22 @@
     <th style="width:50%;">김동민</th>
   </tr>
   <tr>
-    <td><a href="https://github.com/hyomin0357"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
-    <td><a href="https://github.com/ujneg18-source"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
-    <td><a href="https://github.com/yeona9549"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
-    <td><a href="https://github.com/여기에_김동민_깃허브아이디"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
+    <td align="center"><a href="https://github.com/hyomin0357"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
+    <td align="center"><a href="https://github.com/ujneg18-source"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
+    <td align="center"><a href="https://github.com/yeona9549"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
+    <td align="center"><a href="https://github.com/여기에_김동민_깃허브아이디"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
   </tr>
   <tr>
-    <td><img src="산출물/images/기쁨이.png" width="150" height="150"> </td>
+    <td><img src="산출물/images/기쁨이.png" width="150" height="150"></td>
     <td><img src="산출물/images/슬픔이.png" width="150" height="150"></td>
     <td><img src="산출물/images/부럽이.png" width="150" height="150"></td>
     <td><img src="산출물/images/당황이.png" width="150" height="150"></td>
   </tr>
   <tr>
-    <td><b>PM · 데이터</b><br><sub>데이터 수집 및 포스팅</sub><br><sub>산출물 총괄</sub></td>
-    <td><b>GraphDB · 데이터</b><br><sub>GraphDB · VectorDB 설계</sub><br><sub>데이터 수집 및 포스팅</sub></td>
-    <td><b>백엔드</b><br><sub>오늘의 대화 챗봇 로직 구현</sub><br><sub>데이터 수집 및 포스팅</sub></td>
-    <td><b>프론트엔드</b><br><sub>웹UI 구현(센터지도, 치매 예방 게임)</sub><br><sub>백엔드 API 연동</sub></td>
+    <td align="center"><b>PM · 데이터</b><br><sub>데이터 수집 및 포스팅</sub><br><sub>산출물 총괄</sub></td>
+    <td align="center"><b>GraphDB · 데이터</b><br><sub>GraphDB · VectorDB 설계</sub><br><sub>데이터 수집 및 포스팅</sub></td>
+    <td align="center"><b>백엔드</b><br><sub>오늘의 대화 챗봇 로직 구현</sub><br><sub>데이터 수집 및 포스팅</sub></td>
+    <td align="center"  ><b>프론트엔드</b><br><sub>웹UI 구현(센터지도, 치매 예방 게임)</sub><br><sub>백엔드 API 연동</sub></td>
   </tr>
 </table>
 
@@ -81,6 +81,9 @@
 <div align="center">
 <img src="산출물/images/시스템플로우.png" width="800">
 </div>
+
+---
+
 <br>
 <details>
 <summary><b>Supabase ERD</b></summary>
@@ -259,16 +262,13 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 
 </details>
 
-### 1.5 WBS
+---
 
-<details>
-<summary>펼치기</summary>
+### 1.5 WBS
 
 <div align="center">
 <img src="산출물/images/wbs.png" width="1000">
 </div>
-
-</details>
 
 ---
 
@@ -278,13 +278,13 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 - AI 치매 정보 알리미
 - https://dementia-front.vercel.app/
 
-### 2.2 주제
+### 2.2 소개
 
-**3차에서 구축한 "LLM을 연동한 내·외부 문서 기반 질의 응답 시스템"(GraphDB/VectorDB
-기반 RAG 챗봇)을 실제 사용 가능한 웹 서비스로 고도화한다.** 3차가 챗봇 코어(에이전트,
+**3차에서 구축한 "LLM을 연동한 내·외부 문서 기반 질의 응답 시스템"**(GraphDB/VectorDB
+기반 RAG 챗봇)을 실제 사용 가능한 웹 서비스로 고도화한다. 3차가 챗봇 코어(에이전트,
 GraphDB, VectorDB)를 완성하는 데 집중했다면, 4차는 그 코어를 감싸는 **회원 관리, 예방
-콘텐츠, 두뇌 게임, 센터 찾기 지도, 자기관리 저널(오늘의 대화)까지 갖춘 하나의 완결된
-서비스**로 확장하는 것이 목표다.
+콘텐츠, 두뇌 게임, 센터 찾기 지도, 자기관리 저널**(오늘의 대화)까지 갖춘 하나의 완결된
+서비스로 확장하는 것이 목표다.
 
 ### 2.3 배경 및 선정 이유
 
@@ -293,14 +293,11 @@ GraphDB, VectorDB)를 완성하는 데 집중했다면, 4차는 그 코어를 �
 </div>
 <br>
 
-- 3차 프로젝트에서 검증한 RAG 챗봇의 핵심 가치(정확한 정보 안내)는 그대로 유지하되,
-  실제 보호자가 서비스를 "쓸 이유"를 넓히는 데 집중했다. 상담만 하고 끝나는 게 아니라,
-  상담 이후 실제 행동(센터 방문, 예방 활동, 꾸준한 기록)으로 이어지도록 기능을 설계했다.
+- 3차 프로젝트에서 검증한 RAG 챗봇의 핵심 가치(상담 및 센터 연계)는 그대로 유지하되,
+  실제 보호자가 서비스를 **"사용할 이유"** 를 넓히는 데 집중했다. 상담만 하고 끝나는 게 아니라,
+  상담 이후 실제 행동 **(센터 방문, 예방 활동, 꾸준한 기록)** 으로 이어지도록 기능을 설계했다.
 
-- 중앙치매센터 조사에서 확인된 문제의식(3차 README 2.3절 참고 — 치매안심센터 **인지도**
-  49.4% 대비 **실제 방문 경험률** 12.1%)을 4차에서 한 단계 더 풀었다. "안다"에서
-  "가본다"로 이어지는 간극을 좁히기 위해 **치매 센터 찾기** 기능을 새로 만들어,
-  상담에서 언급된 지역을 실제 지도 위 가까운 센터로 바로 연결한다.
+- 중앙치매센터 조사에서 확인된 문제의식(치매안심센터 인지도 대비 실제 방문 경험률 저조)을 4차에서 한 단계 더 풀었다. 기존 **3차에서는 단편적으로 '내 주변 센터' 정보만 조회**할 수 있었던 한계를 넘어, **4차에서는 전국 지도 기반의 치매안심센터 찾기 기능**을 새롭게 구축했다. 이를 통해 전국적으로 **내가 원하는 위치의 센터를 직관적으로 검색**할 수 있을 뿐만 아니라 **해당 센터에서 실제 운영 중인 예방·지원 프로그램 정보**까지 함께 제공한다.
 
 - 예방(76.2%)·원인/증상(49.9%) 정보 수요가 크다는 점에 착안해, 상담 챗봇 하나에
   머무르지 않고 **예방 콘텐츠 · 두뇌 게임 · 오늘의 대화(자기관리 저널)** 를 더해 사용자가 주기적으로 돌아오는 서비스로 설계했다. 3차는 랜딩 페이지와 AI 상담 챗봇뿐이었고, 이 세 축은 전부 4차에서 처음 만들었다.
@@ -340,7 +337,6 @@ SKN31-4th-1Team/
 ├── .env                          # 환경변수 (API 키, DB 접속 정보 — git 미포함)
 ├── .gitignore
 ├── config.py                     # 프로젝트 전역 설정 상수 (모델명, 경로, DB 접속 정보 등)
-├── eval.ipynb                    # RAGAS / 성능 평가용 Jupyter Notebook
 ├── README.md
 ├── requirements.txt
 ├── server.bat                    # 메인 실행 스크립트
@@ -379,10 +375,10 @@ SKN31-4th-1Team/
 │   └── data/
 │
 └── 산출물/                       # 프로젝트 최종 산출물 및 문서
-    ├── 데이터수집및전처리문서.md
-    ├── 성능평가.md
+    ├── 요구사항정의서.md
+    ├── 화면설계서.md
     ├── 시스템아키텍쳐.md
-    ├── 실행화면.md
+    ├── 테스트설계및결과.md
     └── images/                   
 ```
 
@@ -395,8 +391,6 @@ SKN31-4th-1Team/
 - [**🧩 화면 설계서**](/산출물/화면설계서.md)
 - [**🏗️ 시스템 구성도**](/산출물/시스템아키텍쳐.md)
 - [**📖 전체 테스트 계획서 및 테스트 결과보고서** ](/산출물/테스트설계및결과.md)
-- [**📖 RAG성능평가** ](/산출물/성능평가.md)
-- [**📖 데이터수집 및 전처리 문서** ](/산출물/데이터수집및전처리문서.md)
 
 <br>
 
@@ -409,10 +403,10 @@ SKN31-4th-1Team/
 - 
 
 #### 연아
-- 
+- 이번 프로젝트에서 치매 예방 챗봇의 프롬프트와 응답 로직을 설계하고, 성능 평가와 사용자 테스트를 진행하면서 실제 사용자의 관점에서 기능을 점검하는 경험을 할 수 있었습니다. 특히 예상과 다른 응답을 수정하고 테스트 결과를 반영하는 과정을 반복하며, AI 서비스는 구현뿐만 아니라 지속적인 검증과 개선이 중요하다는 것을 느꼈습니다.  4차까지 함께 열심히 작업해준 팀원분들 수고하셨습니다!
 
 #### 효민
-- 
+- 팀원들의 도움 덕분에 3차의 한계를 넘어 예방 콘텐츠 수집과 정성 평가로 유저에게 필요한 서비스를 완성할 수 있었던 것 같아 의미있는 경험이었습니다. 
 
 #### 진영
 -
