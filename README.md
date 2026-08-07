@@ -26,10 +26,10 @@
     <td><a href="https://github.com/여기에_김동민_깃허브아이디"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/></a></td>
   </tr>
   <tr>
-    <td><img src="산출물/images/슬픔이.png" width="100%"></td>
-    <td><img src="산출물/images/부럽이.png" width="100%"></td>
-    <td><img src="산출물/images/기쁨이.png" width="90%"></td>
-    <td><img src="산출물/images/당황이.png" width="100%"></td>
+    <td><img src="산출물/images/슬픔이.png" width="150" height="150"></td>
+    <td><img src="산출물/images/부럽이.png" width="150" height="150"></td>
+    <td><img src="산출물/images/기쁨이.png" width="150" height="150"> </td>
+    <td><img src="산출물/images/당황이.png" width="150" height="150"></td>
   </tr>
   <tr>
     <td><b>GraphDB 설계</b><br><sub>데이터 수집 및 전처리</sub><br><sub>Agent Tool 개발</sub></td>
