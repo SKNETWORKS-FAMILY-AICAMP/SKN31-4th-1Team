@@ -274,7 +274,7 @@ posts                                          ④ 예방 콘텐츠 — 사용�
 
 ## 2. 프로젝트 개요
 
-### 2.1 프로젝트명
+### 2.1 서비스명
 - AI 치매 정보 알리미
 - https://dementia-front.vercel.app/
 
