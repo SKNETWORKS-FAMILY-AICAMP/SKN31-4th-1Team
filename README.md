@@ -28,7 +28,7 @@
   <tr>
     <td><img src="산출물/images/슬픔이.png" width="100%"></td>
     <td><img src="산출물/images/부럽이.png" width="100%"></td>
-    <td><img src="산출물/images/기쁨이.png" width="100%"></td>
+    <td><img src="산출물/images/기쁨이.png" width="90%"></td>
     <td><img src="산출물/images/당황이.png" width="100%"></td>
   </tr>
   <tr>
